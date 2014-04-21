@@ -11,6 +11,11 @@ public class Main extends JavaPlugin implements Listener{
 	public void onEnable() {
 		Bukkit.getServer().getPluginManager().registerEvents(this, this);
 		getConfig().options().copyDefaults(true);
+		getConfig().createSection("feedCommands");
+		getConfig().createSection("healCommands");
+		getConfig().createSection("teleportCommands");
+		getConfig().createSection("vanishCommand");
+		getConfig().createSection("messageCommands");
 		saveConfig();
 		plugin = this;
 		}
@@ -19,5 +24,12 @@ public class Main extends JavaPlugin implements Listener{
 	public void onDisable() {
 	plugin = null;
 	 
+	}
+	public void addDefaults(){
+		getConfig().set("feedCommands.enabled", true);
+		getConfig().set("feedCommands.feedAll", "&3All players have been fed!");
+		getConfig().set("feedCommands.feedSelf", "&3You have been fed!");
+		getConfig().set("feedCommands.coolDownEnabled", true);
+		getConfig().set("feedCommands.coolDownLength", 60);
 	}
 }

@@ -50,6 +50,7 @@ public class FeedCommands implements CommandExecutor{
 									target.setExhaustion(0F);
 									target.setSaturation(10F);
 									target.sendMessage(Messages.feedSelf());
+									p.sendMessage(Messages.feedOthers());
 								}else{
 									p.sendMessage(Exceptions.playernotFound());
 								}
