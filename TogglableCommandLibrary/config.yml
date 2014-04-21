@@ -1,0 +1,4 @@
+#Togglable Command Library Configuration!
+#Supports color/format color codes!
+#Prefix is the prefix before all command messages
+prefix: "&6[&3TCL&6]"
