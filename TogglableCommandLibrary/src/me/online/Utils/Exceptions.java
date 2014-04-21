@@ -28,7 +28,7 @@ public class Exceptions{
 		return a;
 	}
 	public static String notEnoughArgs(){
-		String a = prefix + ChatColor.RED + "Not enough arguments!";
+		String a = prefix + ChatColor.RED + "Invalid Arguments!";
 		return a;
 	}
 	public static String noMoney(){
