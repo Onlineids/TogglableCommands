@@ -1,8 +1,8 @@
 package me.online.Utils;
 
-import org.bukkit.ChatColor;
-
 import me.online.TogglableCommandLibrary.Main;
+
+import org.bukkit.ChatColor;
 
 public class Messages {
 	public static Main plugin;
@@ -13,6 +13,20 @@ public class Messages {
 	private final static String prefix = plugin.getConfig().getString("prefix") + " ";
 	public static String prefix(){
 		return prefix;
+	}
+	public static boolean econEnabled(){
+		boolean a = plugin.getConfig().getBoolean("economyEnabled");
+		return a;
+	}
+	public static String vanished(){
+		String b = prefix + " " + plugin.getConfig().getString("vanishCommand.vanished");
+		String a = ChatColor.translateAlternateColorCodes('&', b);
+		return a;
+	}
+	public static String balance(){
+		String b = prefix + " " + plugin.getConfig().getString("economyCommands.balance");
+		String a = ChatColor.translateAlternateColorCodes('&', b);
+		return a;
 	}
 	public static String feedSelf(){
 		String b = prefix + " " + plugin.getConfig().getString("feedCommands.feedSelf");
@@ -54,12 +68,12 @@ public class Messages {
 		return a;
 	}
 	public static String tpd(){
-		String b = prefix + " " + plugin.getConfig().getString("healcommands.healOthers");
+		String b = prefix + " " + plugin.getConfig().getString("teleportCommands.tpd");
 		String a = ChatColor.translateAlternateColorCodes('&', b);
 		return a;
 	}
 	public static String tpAll(){
-		String b = prefix + " " + plugin.getConfig().getString("healcommands.healOthers");
+		String b = prefix + " " + plugin.getConfig().getString("teleportCommands.tpAll");
 		String a = ChatColor.translateAlternateColorCodes('&', b);
 		return a;
 	}
